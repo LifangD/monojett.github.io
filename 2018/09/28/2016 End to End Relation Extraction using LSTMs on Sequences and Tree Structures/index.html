@@ -2,23 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>关系抽取笔记整理 | Lifang&#39;s blog</title>
+  <title>2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures | Lifang&#39;s blog</title>
   <meta name="keywords" content=" RE ">
-  <meta name="description" content="关系抽取笔记整理 | Lifang&#39;s blog">
+  <meta name="description" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures | Lifang&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="##论文要点回顾 Supervised ExtractionDistant Supervision存在的挑战：     1）错误的正例/噪声     2)  多标签 不确定用哪个标签来对应给定的句子（N:N）  Mintz et al., 2009：指出… riedel et al.,2010: NYT数据中有31%错误正例，7.5%的实体对存在多个标签-Mihai et al,.2012: 多">
+<meta name="description" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree StructuresAuthor: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree struc">
+<meta name="keywords" content="RE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关系抽取笔记整理">
-<meta property="og:url" content="http://monojett.github.io/2018/09/19/论文要点回顾/index.html">
+<meta property="og:title" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures">
+<meta property="og:url" content="http://monojett.github.io/2018/09/28/2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures/index.html">
 <meta property="og:site_name" content="Lifang&#39;s blog">
-<meta property="og:description" content="##论文要点回顾 Supervised ExtractionDistant Supervision存在的挑战：     1）错误的正例/噪声     2)  多标签 不确定用哪个标签来对应给定的句子（N:N）  Mintz et al., 2009：指出… riedel et al.,2010: NYT数据中有31%错误正例，7.5%的实体对存在多个标签-Mihai et al,.2012: 多">
+<meta property="og:description" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree StructuresAuthor: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree struc">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://monojett.github.io/2018/09/19/论文要点回顾/131795658877812774.jpg">
-<meta property="og:updated_time" content="2018-09-19T04:53:14.000Z">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538102260320.png">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538103874535.png">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538104045804.png">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538104088461.png">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538105873288.png">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538106943490.png">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538114468152.png">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538114484172.png">
+<meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538114517574.png">
+<meta property="og:updated_time" content="2018-09-28T06:21:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关系抽取笔记整理">
-<meta name="twitter:description" content="##论文要点回顾 Supervised ExtractionDistant Supervision存在的挑战：     1）错误的正例/噪声     2)  多标签 不确定用哪个标签来对应给定的句子（N:N）  Mintz et al., 2009：指出… riedel et al.,2010: NYT数据中有31%错误正例，7.5%的实体对存在多个标签-Mihai et al,.2012: 多">
-<meta name="twitter:image" content="http://monojett.github.io/2018/09/19/论文要点回顾/131795658877812774.jpg">
+<meta name="twitter:title" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures">
+<meta name="twitter:description" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree StructuresAuthor: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree struc">
+<meta name="twitter:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538102260320.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -82,8 +91,6 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="学习"> 学习 </li>
-    
     <li data-rel="论文"> 论文 </li>
     
 </ul>
@@ -96,7 +103,7 @@
     </div>
     <div><a  class="about site_url"  href="/about">关于</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="3">
+<input type="hidden" id="yelog_site_posts_number" value="1">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -138,28 +145,12 @@
     
     <nav id="title-list-nav">
         
-        <a  class=""
-           href="/2018/09/18/pic-test/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="pic_test">pic_test</span>
-            <span class="post-date" title="2018-09-18 23:22:10">2018/09/18</span>
-        </a>
-        
-        <a  class="学习 "
-           href="/2018/09/18/关系抽取/"
+        <a  class="论文 "
+           href="/2018/09/28/2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures/"
            data-tag="RE"
            data-author="" >
-            <span class="post-title" title="关系抽取笔记整理">关系抽取笔记整理</span>
-            <span class="post-date" title="2018-09-18 00:00:00">2018/09/18</span>
-        </a>
-        
-        <a  class="论文 "
-           href="/2018/09/19/论文要点回顾/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="关系抽取笔记整理">关系抽取笔记整理</span>
-            <span class="post-date" title="2018-09-19 12:53:25">2018/09/19</span>
+            <span class="post-title" title="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures">2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</span>
+            <span class="post-date" title="2018-09-28 14:22:55">2018/09/28</span>
         </a>
         
     </nav>
@@ -174,9 +165,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-关系抽取" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关系抽取笔记整理</h1>
+        <h1 class="article-title">2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</h1>
     
     <div class="article-meta">
         
@@ -184,7 +175,7 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="学习">学习</a>
+            <a href="javascript:" data-rel="论文">论文</a>
             
         </span>
         
@@ -198,7 +189,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-09-18 23:02:51'>2018-09-18 00:00</time>
+        创建时间:<time class="date" title='更新时间: 2018-09-28 14:21:38'>2018-09-28 14:22</time>
         
     </div>
     <div class="article-meta">
@@ -220,7 +211,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#论文要点回顾"><span class="toc-text">论文要点回顾</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2016-End-to-End-Relation-Extraction-using-LSTMs-on-Sequences-and-Tree-Structures"><span class="toc-text">2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#motivation"><span class="toc-text">motivation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#related-work"><span class="toc-text">related work</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#method"><span class="toc-text">method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dataset"><span class="toc-text">dataset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#result"><span class="toc-text">result</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pros"><span class="toc-text">pros</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -235,9 +226,45 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="论文要点回顾"><a href="#论文要点回顾" class="headerlink" title="论文要点回顾"></a>论文要点回顾</h2><ul>
-<li>Mintz el at., 2009：指出…</li>
+        <h1 id="2016-End-to-End-Relation-Extraction-using-LSTMs-on-Sequences-and-Tree-Structures"><a href="#2016-End-to-End-Relation-Extraction-using-LSTMs-on-Sequences-and-Tree-Structures" class="headerlink" title="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures"></a>2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</h1><p>Author: Makoto Miwa， Mohit  Bansal</p>
+<h2 id="motivation"><a href="#motivation" class="headerlink" title="motivation"></a>motivation</h2><p>to capture both the tree substructure information and dependency tree structure information by stacking bidirectional tree-structured LSTM-RNNs on bidirectional sequential LSTM-RNNs.This allows our model to jointly represent both entities and relations with shared parameters in a singele model</p>
+<h2 id="related-work"><a href="#related-work" class="headerlink" title="related work"></a>related work</h2><ul>
+<li>most of the previous method are pipeline but relation interacts with entity information.   </li>
+<li>to represent relations and entities: RNN and CNN</li>
+<li>for relation classification, LSTM is  even worse than CNN, and the author thinks that they do not model entities and relations jointly</li>
+<li>dependencies are not enough to predict</li>
+<li>structured prediction methods are state-of-the-art on several corpora<br><strong>paragraph architecture:</strong> </li>
+<li>about the network : CRF on  bi-lsm performs comparably to the state of the art methods in POS tagging, chunking and NER</li>
+<li>about relation classification:</li>
+<li>about the tree structured LSTM-RNNs</li>
 </ul>
+<h2 id="method"><a href="#method" class="headerlink" title="method"></a>method</h2><ul>
+<li>first detect entities and then extract the relations. </li>
+<li>incorporates two enhancements into training: entity pretraining and scheduled sampling.<br><img src="./1538102260320.png" alt="Alt text"><br><strong>entity deteciton: </strong><br>treat entity detection as a sequence labeling task. (BILOU) use greedy to label(beam search does not help). use the predicted label of a word to predict the label of the next word so as to take label dependencies into account.<br><strong>dependency layer:</strong><br>make use of argument nodes near the bottom of the tree. and note that the two variants of tree-structured LSTM-RNNs are not able to represent the target structures which have a variable number of typed children.<br><div align="center"><img src="./1538103874535.png" alt="Alt text"><br>child-sum:<br><div align="center"><img src="./1538104045804.png" alt="Alt text"><br>N-ary Tree:<br><div align="center"><img src="./1538104088461.png" alt="Alt text"><br><div align="left"><br>note that the N-ary Tree fixes the number of child while the variant did not，and the variant seems consider the different type of child nodes</div></div></div></div></li>
+</ul>
+<p>SP-Tree<br>SubTree<br>FullTree<br>(not very clear, to be supplemented)<br><strong>stacking:</strong><br><img src="./1538105873288.png" alt="Alt text"> St is the hidden state vecor in the sequence layer, Vt(d) is the type embedding of dependency, Vt(e) is the label embedding.<br><strong>Relation Classification:</strong><br>use the last words of detected entities to represent (L or U)  and treat a pair as negative relation when wrongly label the entity or the pair has no relation.<br>the relation candidate vector is constructed as the concatenation of<br><img src="./1538106943490.png" alt="Alt text"><br>hpa is the hidden state of the top LSTM unist<br>hp1, hp2 are the hiddent state of the target words<br>(all in top-down tree)<br>problem:  </p>
+<pre><code>- the sequence layer to the input is not direct
+- use words to represent entities which can not fully use the entity information
+to alleviate the the problem, here they use the concatenation of the hidden state vector. 
+</code></pre><p>there are two labels in bi-directional network,  the author select the one with bigger confidence.<br><strong>Training:</strong><br>BPTT，Adam with gradient clipping，L2-regularization，dropout，entity pretraining，scheduled sampling</p>
+<blockquote>
+<p><strong>what is scheduled sampling?</strong> (Bengio et al.) : whether use the ground truth  or the predicted label to predict the next token in sequence generation</p>
+</blockquote>
+<h2 id="dataset"><a href="#dataset" class="headerlink" title="dataset"></a>dataset</h2><p>ACE05: 7 coarse-grained entity types and 6 coarse-grained relation types<br>ACE04: 7 coarse-grained relation types<br>SemEval-2010 Task 8: 9 relation types and a tenth Ohter</p>
+<h2 id="result"><a href="#result" class="headerlink" title="result"></a>result</h2><p><div align="center"><img src="./1538114468152.png" alt="Alt text"></div></p>
+<p><div align="center"><img src="./1538114484172.png" alt="Alt text"></div></p>
+<p><div align="center"><img src="./1538114517574.png" alt="Alt text"><br>it shows that selecting the appropriate tree structure representation of the input is more important than the choice of the LSTM-RNNN structure on the input.  </div></p>
+<h2 id="pros"><a href="#pros" class="headerlink" title="pros"></a>pros</h2><ul>
+<li>no  RNN-based relation classification model simultaneously the sequence and tree info.   </li>
+<li>solid experiment result, considering lots of factors</li>
+</ul>
+<blockquote>
+<p>inspiration:</p>
+<ol>
+<li>does the number of relation type affects the result since the score on nyt data is lower</li>
+<li>the pretrain is just like the pipeline work, but let the two stage share the parameters.  </li>
+</ol>
+</blockquote>
 
       
        
@@ -247,12 +274,12 @@
 
 
 <div class="article_copyright">
-    <p><span>文章标题:</span>关系抽取笔记整理</p>
+    <p><span>文章标题:</span>2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</p>
     
     <p><span>本文作者:</span><a href="javascript:void(0)" title="MonoJett">MonoJett</a></p>
-    <p><span>发布时间:</span>2018-09-18, 00:00:00</p>
-    <p><span>最后更新:</span>2018-09-18, 23:02:51</p>
-    <span>原始链接:</span><a class="post-url" href="/2018/09/18/关系抽取/" title="关系抽取笔记整理">http://monojett.github.io/2018/09/18/关系抽取/</a>
+    <p><span>发布时间:</span>2018-09-28, 14:22:55</p>
+    <p><span>最后更新:</span>2018-09-28, 14:21:38</p>
+    <span>原始链接:</span><a class="post-url" href="/2018/09/28/2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures/" title="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures">http://monojett.github.io/2018/09/28/2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
