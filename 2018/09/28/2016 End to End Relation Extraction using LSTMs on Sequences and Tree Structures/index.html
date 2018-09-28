@@ -6,13 +6,13 @@
   <meta name="keywords" content=" RE ">
   <meta name="description" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures | Lifang&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree StructuresAuthor: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree struc">
+<meta name="description" content="Author: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree structure information by stacking bidirectional tree-structured LSTM-RNNs on bidirect">
 <meta name="keywords" content="RE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures">
 <meta property="og:url" content="http://monojett.github.io/2018/09/28/2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures/index.html">
 <meta property="og:site_name" content="Lifang&#39;s blog">
-<meta property="og:description" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree StructuresAuthor: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree struc">
+<meta property="og:description" content="Author: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree structure information by stacking bidirectional tree-structured LSTM-RNNs on bidirect">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538102260320.png">
 <meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538103874535.png">
@@ -23,10 +23,10 @@
 <meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538114468152.png">
 <meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538114484172.png">
 <meta property="og:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538114517574.png">
-<meta property="og:updated_time" content="2018-09-28T06:21:38.000Z">
+<meta property="og:updated_time" content="2018-09-28T06:30:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures">
-<meta name="twitter:description" content="2016 End to End Relation Extraction using LSTMs on Sequences and Tree StructuresAuthor: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree struc">
+<meta name="twitter:description" content="Author: Makoto Miwa， Mohit  Bansal motivationto capture both the tree substructure information and dependency tree structure information by stacking bidirectional tree-structured LSTM-RNNs on bidirect">
 <meta name="twitter:image" content="http://monojett.github.io/2018/09/28/2016%20End%20to%20End%20Relation%20Extraction%20using%20LSTMs%20on%20Sequences%20and%20Tree%20Structures/1538102260320.png">
 
 
@@ -150,7 +150,7 @@
            data-tag="RE"
            data-author="" >
             <span class="post-title" title="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures">2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</span>
-            <span class="post-date" title="2018-09-28 14:22:55">2018/09/28</span>
+            <span class="post-date" title="2018-09-28 14:31:09">2018/09/28</span>
         </a>
         
     </nav>
@@ -189,7 +189,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-09-28 14:21:38'>2018-09-28 14:22</time>
+        创建时间:<time class="date" title='更新时间: 2018-09-28 14:30:16'>2018-09-28 14:31</time>
         
     </div>
     <div class="article-meta">
@@ -211,7 +211,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2016-End-to-End-Relation-Extraction-using-LSTMs-on-Sequences-and-Tree-Structures"><span class="toc-text">2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#motivation"><span class="toc-text">motivation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#related-work"><span class="toc-text">related work</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#method"><span class="toc-text">method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dataset"><span class="toc-text">dataset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#result"><span class="toc-text">result</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pros"><span class="toc-text">pros</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#motivation"><span class="toc-text">motivation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#related-work"><span class="toc-text">related work</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#method"><span class="toc-text">method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dataset"><span class="toc-text">dataset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#result"><span class="toc-text">result</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pros"><span class="toc-text">pros</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -226,7 +226,7 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="2016-End-to-End-Relation-Extraction-using-LSTMs-on-Sequences-and-Tree-Structures"><a href="#2016-End-to-End-Relation-Extraction-using-LSTMs-on-Sequences-and-Tree-Structures" class="headerlink" title="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures"></a>2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</h1><p>Author: Makoto Miwa， Mohit  Bansal</p>
+        <p>Author: Makoto Miwa， Mohit  Bansal</p>
 <h2 id="motivation"><a href="#motivation" class="headerlink" title="motivation"></a>motivation</h2><p>to capture both the tree substructure information and dependency tree structure information by stacking bidirectional tree-structured LSTM-RNNs on bidirectional sequential LSTM-RNNs.This allows our model to jointly represent both entities and relations with shared parameters in a singele model</p>
 <h2 id="related-work"><a href="#related-work" class="headerlink" title="related work"></a>related work</h2><ul>
 <li>most of the previous method are pipeline but relation interacts with entity information.   </li>
@@ -277,8 +277,8 @@ to alleviate the the problem, here they use the concatenation of the hidden stat
     <p><span>文章标题:</span>2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures</p>
     
     <p><span>本文作者:</span><a href="javascript:void(0)" title="MonoJett">MonoJett</a></p>
-    <p><span>发布时间:</span>2018-09-28, 14:22:55</p>
-    <p><span>最后更新:</span>2018-09-28, 14:21:38</p>
+    <p><span>发布时间:</span>2018-09-28, 14:31:09</p>
+    <p><span>最后更新:</span>2018-09-28, 14:30:16</p>
     <span>原始链接:</span><a class="post-url" href="/2018/09/28/2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures/" title="2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures">http://monojett.github.io/2018/09/28/2016 End to End Relation Extraction using LSTMs on Sequences and Tree Structures/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
